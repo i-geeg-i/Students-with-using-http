@@ -4,14 +4,14 @@ namespace HTTP_APi
 {
     public class Spec
     {
-        public int Code { get; }
+        public string Code { get; }
         public string Name { get; set; }
-        public int Department { get; set; }
-        public Spec(int Id, string Name, string Department)
+        public int DepartmentId { get; set; }
+        public Spec(string Code, string Name, int DepartmentId)
         {
-            this.Id = Id;
+            this.Code = Code;
             this.Name = Name;
-            this.Department = Department;
+            this.DepartmentId = DepartmentId;
         }
     }
 }

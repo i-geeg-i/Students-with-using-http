@@ -4,7 +4,7 @@ namespace HTTP_APi
 {
     public class Group
     {
-        public int Id { get; }
+        public string Id { get; }
         public int Curs { get; set; }
         public int Spec { get; set; }
         public int OldesStudentId { get; set; }
