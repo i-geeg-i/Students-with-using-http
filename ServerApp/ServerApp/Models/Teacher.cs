@@ -17,7 +17,7 @@ namespace HTTP_APi
             this.MiddleName = MiddleName;
             this.LastName = LastName;
             this.Department = Department;
-            this.Post = Post
+            this.Post = Post;
         }
     }
 }

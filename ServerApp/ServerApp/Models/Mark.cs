@@ -8,12 +8,11 @@ namespace HTTP_APi
         public int StudentID { get; set; }
         public int SubjectID { get; set; }
         public int Value { get; set; }
-        public Mark(int Id, string StudentID, string SubjectID, string Value)
+        public Mark(int Id, int StudentID, int SubjectID, int Value)
         {
-            this.Id = id;
+            this.Id = Id;
             this.StudentID = StudentID;
             this.SubjectID = SubjectID;
-            this.LastName = FirstName;
             this.Value = Value;
         }
     }

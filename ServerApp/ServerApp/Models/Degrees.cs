@@ -6,7 +6,7 @@ namespace HTTP_APi
     {
         public int Id { get; }
         public string Name { get; set; }
-        public Student(int id, string Name)
+        public Degrees(int id, string Name)
         {
             this.Id = id;
             this.Name = Name;

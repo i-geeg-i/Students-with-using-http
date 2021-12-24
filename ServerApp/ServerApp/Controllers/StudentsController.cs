@@ -14,16 +14,23 @@ namespace ServerApp.Controllers
     {
 
         private readonly ILogger<WeatherForecastController> _logger;
+        private KnowledgeCenter _knowledgeCenter;
 
-        public StudentsController(ILogger<WeatherForecastController> logger)
+        public StudentsController(ILogger<WeatherForecastController> logger, KnowledgeCenter knowledgeCenter)
         {
             _logger = logger;
+            _knowledgeCenter = knowledgeCenter;
         }
 
-        [HttpGet]
+        [HttpGet("students")]
         public List<Student> Get()
         {
-            
+            return _knowledgeCenter.students;
+        }
+        [HttpGet("student/{id}")]
+        public Student GetStudent([FromRoute] int id)
+        {
+            return _knowledgeCenter.GetStudent(id);
         }
     }
 }

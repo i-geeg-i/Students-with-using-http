@@ -8,7 +8,7 @@ namespace HTTP_APi
         public int Curs { get; set; }
         public int Spec { get; set; }
         public int OldesStudentId { get; set; }
-        public Group(int Id, int Curs, int Spec, int OldesStudentId)
+        public Group(string Id, int Curs, int Spec, int OldesStudentId)
         {
             this.Id = Id;
             this.Curs = Curs;
