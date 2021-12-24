@@ -9,7 +9,7 @@ namespace HTTP_APi
         public string MiddleName { get; set; }
         public string LastName { get; set; }
         public int Group { get; set; }
-        public Student(int id, string FirstName, string  MiddleName, string LastName, int Group)
+        public Student(string FirstName, string  MiddleName, string LastName, int Group, int id = 0)
         {
             this.Id = id;
             this.FirstName = FirstName;
