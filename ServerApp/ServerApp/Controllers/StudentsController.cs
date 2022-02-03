@@ -32,5 +32,20 @@ namespace ServerApp.Controllers
         {
             return _knowledgeCenter.GetStudent(id);
         }
+        [HttpPost("students")]
+        public Student NewStudent([FromBody] Student student)
+        {
+            return _knowledgeCenter.AddStudent(student);
+        }
+        [HttpPost("students/{id}")]
+        public void NewStudent([FromRoute] int id, [FromBody] Mark mark)
+        {
+            _knowledgeCenter.AddMark(id, mark);
+        }
+        [HttpPost("teachers")]
+        public Teacher NewTeacher([FromBody] Teacher teacher)
+        {
+            return _knowledgeCenter.AddTeacher(teacher);
+        }
     }
 }

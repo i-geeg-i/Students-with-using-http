@@ -20,15 +20,28 @@ namespace ServerApp
             //TODO add sql
             return teachersToReturn;
         }
-        static public void AddNewStudent(Student student)
+        static public Student GetStudent()
+        {
+            Student studentToReturn = null;
+            //TODO add sql
+            return studentToReturn;
+        }
+        static public Teacher GetTeacher()
+        {
+            Teacher teacherToReturn = null;
+            //TODO add sql
+            return teacherToReturn;
+        }
+        static public int AddNewStudent(Student student)
         {
             //TODO add sql
+            return 0;
         }
         static public void AddNewTeacher(Teacher teacher)
         {
             //TODO add sql
         }
-        static public void AddMark(Student student, Mark mark)
+        static public void AddMark(int studentId, Mark mark)
         {
             //TODO add sql
         }

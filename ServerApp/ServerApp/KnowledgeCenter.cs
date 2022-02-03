@@ -22,20 +22,11 @@ namespace ServerApp
                 return SQL.GetTeachers();
             }
         }   
-        public void AddStudent(Student student)
+        public Student AddStudent(Student student)
         {
-            /*Console.WriteLine("Введите фамилию: ");
-            string lastName = Console.ReadLine();
-            Console.WriteLine("Введите имя:");
-            string firstName = Console.ReadLine();
-            Console.WriteLine("Введите ваше отчество:");
-            string patronymic = Console.ReadLine();
-            Console.WriteLine("Введите группу (если нет - 0): ");
-            int group = Convert.ToInt32(Console.ReadLine());
-            Student student = new Student(firstName, patronymic, lastName, group);*/ //TODO move to client app
-            SQL.AddNewStudent(student);
+            return SQL.GetStudent(SQL.AddNewStudent(student));
         }
-        public void AddTeacher(Teacher teacher)
+        public Teacher AddTeacher(Teacher teacher)
         {
             /*Console.WriteLine("Введите фамилию: ");
             string lastName = Console.ReadLine();
@@ -44,7 +35,8 @@ namespace ServerApp
             Console.WriteLine("Введите ваше отчество:");
             string patronymic = Console.ReadLine();
             Console.WriteLine("Введите группу (если нет - 0): ");*/ //TODO move to client app
-            SQL.AddNewTeacher(teacher);
+            return SQL.GetTeacher(SQL.AddNewTeacher(teacher));
+
         }
         public Student GetStudent(int id)
         {
@@ -57,9 +49,9 @@ namespace ServerApp
             }
             return new Student("Error", "Error", "Error", 0, -1);
         }
-        public void AddMark(Student student, Mark mark)
+        public void AddMark(int studentId, Mark mark)
         {
-            SQL.AddMark(student, mark);
+            SQL.AddMark(studentId, mark);
         }
 
     }
